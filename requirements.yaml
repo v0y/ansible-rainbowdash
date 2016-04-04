@@ -1,0 +1,4 @@
+---
+
+- src: debops.owncloud
+  version: v0.2.0

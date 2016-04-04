@@ -4,11 +4,11 @@ Ansible for Rainbow Dash VPS
 Install roles:
 
 ```sh
-ansible-galaxy install -r install_roles.yml -f
+ansible-galaxy install -r requirements.yaml -f
 ```
 
 Run roles:
 
 ```sh
-ansible-playbook setup_rainbowdash.yml -i inventory
+ansible-playbook setup_rainbowdash.yaml -i inventory
 ```
