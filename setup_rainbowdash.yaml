@@ -7,3 +7,6 @@
   become_method: sudo
   vars:
     max_clients: 200
+
+  roles:
+    - server_deps
