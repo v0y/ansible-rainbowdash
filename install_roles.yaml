@@ -1,0 +1,5 @@
+---
+
+- src: https://github.com/Stouts/Stouts.python
+  path: roles/
+  version: 2.2.0
