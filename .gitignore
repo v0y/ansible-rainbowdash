@@ -1,2 +1,3 @@
 *.retry
 roles/Stouts.python
+roles/Stouts.supervisor
