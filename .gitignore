@@ -1,4 +1,3 @@
 *.retry
 roles/Stouts.python
 roles/Stouts.supervisor
-roles/Stouts.nginx
