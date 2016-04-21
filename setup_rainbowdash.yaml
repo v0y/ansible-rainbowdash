@@ -9,8 +9,9 @@
   roles:
     - role: Stouts.python
     - role: server_deps
-    - role: homepage
     - role: Stouts.supervisor
+    - role: homepage
+    - role: nginx
 
   vars:
     max_clients: 200
