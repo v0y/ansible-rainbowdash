@@ -5,8 +5,36 @@
   remote_user: root
   become: yes
   become_method: sudo
+
+  roles:
+    - role: Stouts.python
+    - role: server_deps
+    - role: homepage
+    - role: Stouts.supervisor
+
   vars:
     max_clients: 200
 
-  roles:
-    - server_deps
+    #########################################
+    # python
+    #########################################
+    python_enabled: yes
+    python_versions: [2.7, 3.4]
+    python_virtualenvs:
+      - path: /home/yyyyy_ooo/venvs/yyyyy_ooo
+        python: python3
+
+    #########################################
+    # supervisor
+    #########################################
+    supervisor_version: 3.2.3
+    supervisor_tasks:
+      - name: yyyyy_ooo_uwsgi
+        command: /home/yyyyy_ooo/venvs/yyyyy_ooo/bin/uwsgi /etc/uwsgi/apps-available/yyyyy_ooo.ini
+        directory: /home/yyyyy_ooo
+        user: yyyyy_ooo
+        autostart: true
+        redirect_stderr: true
+        stdout_logfile: /home/yyyyy_ooo/yyyyy_ooo.log
+        loglevel: warn
+        autorestart: true

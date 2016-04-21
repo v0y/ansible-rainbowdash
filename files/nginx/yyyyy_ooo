@@ -1,0 +1,18 @@
+server {
+  access_log /var/log/nginx/x_access.log;
+  error_log /var/log/nginx/x_error.log;
+
+  listen 80;
+  server_name yyyyy.ooo;
+  root /var/www/yyyyy.ooo/public;
+  client_max_body_size 10M;
+
+  if ($http_host != "yyyyy.ooo") {
+    rewrite ^ http://yyyyy.ooo;
+  }
+
+  location / {
+    include uwsgi_params;
+    uwsgi_pass unix:/var/run/uwsgi/app/yyyyy.ooo/socket;
+  }
+}
