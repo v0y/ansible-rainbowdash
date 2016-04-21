@@ -1,7 +1,4 @@
 ---
 
-- name: Clone homepage repo
-  git: repo=git@github.com:v0y/homepage.git dest=/home/yyyyy_ooo/repos/homepage accept_hostkey=yes force=yes
-
 - name: Install homepage python dependencies
   pip: chdir=/home/yyyyy_ooo/repos/homepage executable=/home/yyyyy_ooo/venvs/yyyyy_ooo/bin/pip requirements=/home/yyyyy_ooo/repos/homepage/requirements.txt

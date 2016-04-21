@@ -1,0 +1,4 @@
+---
+
+- name: Clone homepage repo
+  git: repo=git@github.com:v0y/homepage.git dest=/home/yyyyy_ooo/repos/homepage accept_hostkey=yes force=yes

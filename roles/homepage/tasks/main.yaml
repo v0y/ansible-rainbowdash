@@ -1,6 +1,7 @@
 ---
 
 - include: users.yaml
-- include: application.yaml
+- include: get_code.yaml
+- include: install.yaml
 - include: uwsgi.yaml
 - include: nginx.yaml
