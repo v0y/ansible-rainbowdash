@@ -1,0 +1,10 @@
+---
+
+- name: Create users
+  user: name={{ item }} state=present generate_ssh_key=yes home=/home/{{ item }}
+  with_items:
+    - yyyyy_ooo
+
+- name: Change homepage venvs owner
+  file: path=/home/yyyyy_ooo/venvs owner=yyyyy_ooo state=directory recurse=yes
+

@@ -32,7 +32,7 @@
       - name: yyyyy_ooo_uwsgi
         command: /home/yyyyy_ooo/venvs/yyyyy_ooo/bin/uwsgi /etc/uwsgi/apps-available/yyyyy_ooo.ini
         directory: /home/yyyyy_ooo
-        user: yyyyy_ooo
+        user: root
         autostart: true
         redirect_stderr: true
         stdout_logfile: /home/yyyyy_ooo/yyyyy_ooo.log

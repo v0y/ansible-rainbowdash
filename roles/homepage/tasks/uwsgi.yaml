@@ -1,0 +1,10 @@
+---
+
+- name: Copy homepage uwsgi config
+  copy: src=files/yyyyy_ooo.ini dest=/etc/uwsgi/apps-available/yyyyy_ooo.ini owner=yyyyy_ooo
+
+- name: Change uwsgi socket dir owner
+  file: path=/var/run/uwsgi/app/yyyyy.ooo owner=yyyyy_ooo state=directory recurse=yes
+
+- name: Restart uwsgi
+  command: supervisorctl restart yyyyy_ooo_uwsgi

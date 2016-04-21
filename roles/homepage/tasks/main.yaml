@@ -1,3 +1,6 @@
 ---
 
-- include: homepage.yaml
+- include: users.yaml
+- include: application.yaml
+- include: uwsgi.yaml
+- include: nginx.yaml
